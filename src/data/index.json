@@ -1,0 +1,404 @@
+{
+  "recipes": [
+    {
+      "title": "ローカルリポジトリの生成",
+      "commands": [
+        "git init"
+      ]
+    },
+    {
+      "title": "変更されたファイルの一覧を表示",
+      "commands": [
+        "git status"
+      ]
+    },
+    {
+      "title": "index.htmlをステージングに上げる",
+      "commands": [
+        "git add index.html"
+      ]
+    },
+    {
+      "title": "変更をコミット",
+      "commands": [
+        "git commit -m \"initial commit\""
+      ]
+    },
+    {
+      "title": "最後のコミットまで戻す",
+      "commands": [
+        "git checkout -- ."
+      ]
+    },
+    {
+      "title": "過去のコミットの内容を新しい順から一覧で表示",
+      "commands": [
+        "git log"
+      ]
+    },
+    {
+      "title": "拡張子がpngのファイルをステージングに上げる",
+      "commands": [
+        "git add *.png"
+      ]
+    },
+    {
+      "title": "cssフォルダ内にあるすべてのファイルをステージングに上げる",
+      "commands": [
+        "git add css/"
+      ]
+    },
+    {
+      "title": "pdfフォルダ内にある拡張子がpdfのファイルをステージングに上げる",
+      "commands": [
+        "git add pdfs/*.pdf"
+      ]
+    },
+    {
+      "title": "すべての編集済みファイルをステージングに上げる",
+      "commands": [
+        "git add -A"
+      ]
+    },
+    {
+      "title": "拡張子がxmlのファイルをステージングから下ろす",
+      "commands": [
+        "git reset *.xml"
+      ]
+    },
+    {
+      "title": "コミットログを一行で表示する",
+      "commands": [
+        "git log --oneline"
+      ]
+    },
+    {
+      "title": "ファイルの状態をわかりやすく表示する",
+      "commands": [
+        "git status -s"
+      ]
+    },
+    {
+      "title": "拡張子がxmlのファイルをステージングから下ろす(作業ブランチを表示）",
+      "commands": [
+        "git status -s -b"
+      ]
+    },
+    {
+      "title": "エリアスの設定(git log をインラインで表示するエリアス)",
+      "commands": [
+        "git config --global alias.lg \"log --oneline --decorate --all --graph\""
+      ]
+    },
+    {
+      "title": "エリアスの設定(git status)",
+      "commands": [
+        "git config --global -e"
+      ]
+    },
+    {
+      "title": "Gitコンフィグの情報を表示する",
+      "commands": [
+        "git config --global -l",
+        "git config --global -e"
+      ]
+    },
+    {
+      "title": "最後のコミットとローカルファイルでの変更差分を表示する",
+      "commands": [
+        "git diff"
+      ]
+    },
+    {
+      "title": "最後のコミットとステージングに上がっているファイルの変更差分を表示する",
+      "commands": [
+        "git diff --staged"
+      ]
+    },
+    {
+      "title": "ステージングに上がっているREADME.mdをステージングから下ろす",
+      "commands": [
+        "git reset HEAD README.md"
+      ]
+    },
+    {
+      "title": "README.mdファイルの変更を戻す",
+      "commands": [
+        "git checkout -- README.md"
+      ]
+    },
+    {
+      "title": "addとcommitを同時にする",
+      "commands": [
+        "git commit -am \"update readme\""
+      ]
+    },
+    {
+      "title": "コミットメッセージの修正",
+      "commands": [
+        "git commit --amend -m \"update readme\""
+      ]
+    },
+    {
+      "title": "既にあるコミットの修正を修正しなおす。",
+      "commands": [
+        "git reset --soft HEAD^",
+        "git commit -am \"update readme\""
+      ]
+    },
+    {
+      "title": "マルチラインでコミットを行う",
+      "commands": [
+        "git commit"
+      ]
+    },
+    {
+      "title": "指定したコミットの状態に戻す",
+      "commands": [
+        "git reset --mixed 860c6c2"
+      ]
+    },
+    {
+      "title": "指定したコミットの状態に戻したあとに、その先のコミットを捨てる",
+      "commands": [
+        "git reset --hard 860c6c2"
+      ]
+    },
+    {
+      "title": "HEADのログを表示",
+      "commands": [
+        "git reflog"
+      ]
+    },
+    {
+      "title": "ファイルの移動（リネーム）",
+      "commands": [
+        "git mv original.txt clone.txt"
+      ]
+    },
+    {
+      "title": "ファイルの削除",
+      "commands": [
+        "git rm original.txt"
+      ]
+    },
+    {
+      "title": "新しく追加されたファイルは追加されず、変更・削除されたファイルのみがステージングに追加される",
+      "commands": [
+        "git add -u"
+      ]
+    },
+    {
+      "title": "新しいブランチを作る",
+      "commands": [
+        "git branch feature/register"
+      ]
+    },
+    {
+      "title": "新しいブランチを作成すると同時にそのブランチに移動する",
+      "commands": [
+        "git branch -b feature/register"
+      ]
+    },
+    {
+      "title": " ローカルブランチの一覧",
+      "commands": [
+        "git branch"
+      ]
+    },
+    {
+      "title": "feature/register と master （ブランチ間）の差分を表示",
+      "commands": [
+        "git diff feature/register master"
+      ]
+    },
+    {
+      "title": "masterローカルブランチに移動",
+      "commands": [
+        "git checkout master"
+      ]
+    },
+    {
+      "title": "今いるブランチとfeature/registerブランチをマージする（Fast-Forward）",
+      "commands": [
+        "git merge feature/register"
+      ]
+    },
+    {
+      "title": "feature/registerローカルブランチを削除する",
+      "commands": [
+        "git branch -d feature/register"
+      ]
+    },
+    {
+      "title": "Tagの付与",
+      "commands": [
+        "git tag v1.0.0"
+      ]
+    },
+    {
+      "title": "Tagの一覧",
+      "commands": [
+        "git tag"
+      ]
+    },
+    {
+      "title": "Tagを削除",
+      "commands": [
+        "git tag -d v1.0.0"
+      ]
+    },
+    {
+      "title": "コメント付きタグ付与",
+      "commands": [
+        "git tag -a v1.0.0 -m \"Version 1.0.0\""
+      ]
+    },
+    {
+      "title": "タグと任意コミットハッシュを紐付ける（コメント付き）",
+      "commands": [
+        "git tag -a v0.1.0 345d7de -m \"Version alfa\""
+      ]
+    },
+    {
+      "title": "タグv1.0.0の詳細情報を表示",
+      "commands": [
+        "git show v1.0.0"
+      ]
+    },
+    {
+      "title": "現時点の変更をStash（退避）する",
+      "commands": [
+        "git stash"
+      ]
+    },
+    {
+      "title": "現時点の変更をStash（退避）する",
+      "commands": [
+        "git stash save"
+      ]
+    },
+    {
+      "title": "Stashの一覧を表示する",
+      "commands": [
+        "git stash list"
+      ]
+    },
+    {
+      "title": "最後にStashしたものを戻す",
+      "commands": [
+        "git stash apply"
+      ]
+    },
+    {
+      "title": "任意のStashを戻す（StashID指定）",
+      "commands": [
+        "git stash apply stash@{1}"
+      ]
+    },
+    {
+      "title": "最後のStashを戻した後にStashから削除",
+      "commands": [
+        "git stash pop"
+      ]
+    },
+    {
+      "title": "Stashを削除",
+      "commands": [
+        "git stash drop"
+      ]
+    },
+    {
+      "title": "ステージングに上がっているファイル以外をStashする",
+      "commands": [
+        "git stash save --keep-index"
+      ]
+    },
+    {
+      "title": "addしていないファイルも含めてStashする",
+      "commands": [
+        "git stash save --include-untracked"
+      ]
+    },
+    {
+      "title": "全てのStashの情報を表示",
+      "commands": [
+        "git stash list --stat"
+      ]
+    },
+    {
+      "title": "最後にStashしたドキュメントの情報を表示",
+      "commands": [
+        "git show stash"
+      ]
+    },
+    {
+      "title": "指定したStashの情報を表示",
+      "commands": [
+        "git show stash@{1}"
+      ]
+    },
+    {
+      "title": "コメント付きStash",
+      "commands": [
+        "git stash save \"add test\""
+      ]
+    },
+    {
+      "title": "Stashを全て削除",
+      "commands": [
+        "git stash clear"
+      ]
+    },
+    {
+      "title": "リモートリポジトリをクローンする",
+      "commands": [
+        "git clone https://github.com/username/repository.git"
+      ]
+    },
+    {
+      "title": "リモートリポジトリの向き先を表示する",
+      "commands": [
+        "git remote -v"
+      ]
+    },
+    {
+      "title": "ローカルにあるTagをリモートリポジトリに上げる",
+      "commands": [
+        "git push --tags"
+      ]
+    },
+    {
+      "title": "リモートリポジトリの最新をローカルに持ってくる（自動マージ）",
+      "commands": [
+        "git pull"
+      ]
+    },
+    {
+      "title": "リモートリポジトリの最新をローカルに持ってくる（自動マージをしない）",
+      "commands": [
+        "git fetch"
+      ]
+    },
+    {
+      "title": "フォーク元のリポジトリを参照する",
+      "commands": [
+        "git remote add upstream https://github.com/username/repository.git"
+      ]
+    },
+    {
+      "title": "フォーク元リポジトリのMasterブランチからプルする",
+      "commands": [
+        "git pull upstream master"
+      ]
+    },
+    {
+      "title": "既存のリポジトリをリモートに登録する",
+      "commands": [
+        "git remote add origin https://github.com/username/repository.git",
+        "git branch -M master",
+        "git push -u origin master"
+      ]
+    }
+  ]
+}
