@@ -399,6 +399,14 @@
         "git branch -M master",
         "git push -u origin master"
       ]
+    },
+    {
+      "title": "リモートから直前のコミットを削除する",
+      "commands": [
+        "git reset --soft @~",
+        "git stash",
+        "git push --force"
+      ]
     }
   ]
 }
